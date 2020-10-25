@@ -1,0 +1,92 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "FET Audio Power Amplifier"
+Date "2020-10-22"
+Rev "1.0"
+Comp "Ēriks Rudziks"
+Comment1 "Top Level"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:Q_NMOS_GDS Q?
+U 1 1 5F9181D8
+P 6900 3900
+F 0 "Q?" H 7104 3946 50  0000 L CNN
+F 1 "Q_NMOS_GDS" H 7104 3855 50  0000 L CNN
+F 2 "" H 7100 4000 50  0001 C CNN
+F 3 "~" H 6900 3900 50  0001 C CNN
+	1    6900 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Q_PMOS_DGS Q?
+U 1 1 5F93F320
+P 6900 4600
+F 0 "Q?" H 7105 4646 50  0000 L CNN
+F 1 "Q_PMOS_DGS" H 7105 4555 50  0000 L CNN
+F 2 "" H 7100 4700 50  0001 C CNN
+F 3 "~" H 6900 4600 50  0001 C CNN
+	1    6900 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5F9403D1
+P 5850 3900
+F 0 "R?" V 5643 3900 50  0000 C CNN
+F 1 "7R" V 5734 3900 50  0000 C CNN
+F 2 "" V 5780 3900 50  0001 C CNN
+F 3 "~" H 5850 3900 50  0001 C CNN
+	1    5850 3900
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6000 3900 6700 3900
+$Comp
+L Device:R_POT_TRIM RV?
+U 1 1 5F94148C
+P 5300 4350
+F 0 "RV?" H 5230 4304 50  0000 R CNN
+F 1 "R_POT_TRIM" H 5230 4395 50  0000 R CNN
+F 2 "" H 5300 4350 50  0001 C CNN
+F 3 "~" H 5300 4350 50  0001 C CNN
+	1    5300 4350
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5700 3900 5300 3900
+Wire Wire Line
+	5300 3900 5300 4200
+Wire Wire Line
+	6700 4600 6150 4600
+Wire Wire Line
+	5300 4600 5300 4550
+Wire Wire Line
+	5150 4350 5150 4550
+Wire Wire Line
+	5150 4550 5300 4550
+Connection ~ 5300 4550
+Wire Wire Line
+	5300 4550 5300 4500
+$Comp
+L Device:R R?
+U 1 1 5F9425F8
+P 6000 4600
+F 0 "R?" V 5793 4600 50  0000 C CNN
+F 1 "R" V 5884 4600 50  0000 C CNN
+F 2 "" V 5930 4600 50  0001 C CNN
+F 3 "~" H 6000 4600 50  0001 C CNN
+	1    6000 4600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5850 4600 5300 4600
+Wire Wire Line
+	7000 4100 7000 4400
+$EndSCHEMATC
