@@ -1,0 +1,146 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 6
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector_Generic:Conn_01x02 J?
+U 1 1 5FB1725B
+P 2000 2950
+F 0 "J?" H 1918 3167 50  0001 C CNN
+F 1 "12V" H 1918 3075 50  0000 C CNN
+F 2 "" H 2000 2950 50  0001 C CNN
+F 3 "~" H 2000 2950 50  0001 C CNN
+	1    2000 2950
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:CP C1
+U 1 1 5FB17DA7
+P 2850 3300
+F 0 "C1" H 2968 3346 50  0000 L CNN
+F 1 "1pF" H 2968 3255 50  0000 L CNN
+F 2 "" H 2888 3150 50  0001 C CNN
+F 3 "~" H 2850 3300 50  0001 C CNN
+	1    2850 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C2
+U 1 1 5FB18369
+P 3650 3600
+F 0 "C2" H 3768 3646 50  0000 L CNN
+F 1 "10uF" H 3768 3555 50  0000 L CNN
+F 2 "" H 3688 3450 50  0001 C CNN
+F 3 "~" H 3650 3600 50  0001 C CNN
+	1    3650 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5FB187FB
+P 3650 3150
+F 0 "R1" H 3720 3196 50  0000 L CNN
+F 1 "560" V 3650 3150 50  0000 C CNN
+F 2 "" V 3580 3150 50  0001 C CNN
+F 3 "~" H 3650 3150 50  0001 C CNN
+	1    3650 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:2N3904 Q1
+U 1 1 5FB19785
+P 4600 3050
+F 0 "Q1" V 4928 3050 50  0000 C CNN
+F 1 "2N3904" V 4837 3050 50  0000 C CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 4800 2975 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N3904.pdf" H 4600 3050 50  0001 L CNN
+	1    4600 3050
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:D D1
+U 1 1 5FB1A6A2
+P 4600 3600
+F 0 "D1" V 4600 3680 50  0000 L CNN
+F 1 "D" V 4645 3680 50  0001 L CNN
+F 2 "" H 4600 3600 50  0001 C CNN
+F 3 "~" H 4600 3600 50  0001 C CNN
+	1    4600 3600
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C3
+U 1 1 5FB1AE4F
+P 5450 3350
+F 0 "C3" H 5565 3396 50  0000 L CNN
+F 1 "330nF" H 5565 3305 50  0000 L CNN
+F 2 "" H 5488 3200 50  0001 C CNN
+F 3 "~" H 5450 3350 50  0001 C CNN
+	1    5450 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2200 2950 2850 2950
+Wire Wire Line
+	2850 3150 2850 2950
+Connection ~ 2850 2950
+Wire Wire Line
+	2850 2950 3650 2950
+Wire Wire Line
+	3650 2950 3650 3000
+Connection ~ 3650 2950
+Wire Wire Line
+	3650 2950 4400 2950
+Wire Wire Line
+	3650 3300 3650 3450
+Wire Wire Line
+	2200 3050 2400 3050
+Wire Wire Line
+	2400 3050 2400 3750
+Wire Wire Line
+	2850 3450 2850 3750
+Wire Wire Line
+	2400 3750 2850 3750
+Connection ~ 2850 3750
+Wire Wire Line
+	2850 3750 3650 3750
+Wire Wire Line
+	3650 3450 4600 3450
+Connection ~ 3650 3450
+Wire Wire Line
+	4600 3750 3650 3750
+Connection ~ 3650 3750
+Wire Wire Line
+	4600 3450 4600 3250
+Connection ~ 4600 3450
+Wire Wire Line
+	4800 2950 5450 2950
+Wire Wire Line
+	5450 2950 5450 3200
+Wire Wire Line
+	4600 3750 5450 3750
+Wire Wire Line
+	5450 3750 5450 3500
+Connection ~ 4600 3750
+Text HLabel 6100 2950 2    50   Input ~ 0
+9V
+Text HLabel 6100 3750 2    50   Input ~ 0
+GND
+Wire Wire Line
+	6100 2950 5450 2950
+Connection ~ 5450 2950
+Wire Wire Line
+	5450 3750 6100 3750
+Connection ~ 5450 3750
+$EndSCHEMATC
